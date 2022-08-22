@@ -16,13 +16,19 @@ describe("Servers test (with setup and tear-down)", function() {
     //submits server info
     submitServerInfo();
     //says what to expect
-    expect(Object.kays(allServers).length).toEqual(0);
+    expect(Object.keys(allServers).length).toEqual(0);
   });
 
   it('should update server table', function() {
-    expect(curTdList.length).toEqual (3);
+    submitServerInfo();
+    updateServerTable();
+
+    let curTdList = document.querySelectorAll('#serverTable tbody tr td');
+
+    expect(curTdList.length).toEqual(3);
     expect(curTdList[0].innerText).toEqual ('Alice');
-    expect(curTdList[1].innerText).toEqual ('X');
+    expect(curTdList[1].innerText).toEqual ('$0.00');
+    expect(curTdList[2].innerText).toEqual ('X');
   });
 
 
