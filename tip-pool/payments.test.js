@@ -11,6 +11,14 @@ describe('payments tests', function () {
         expect(allPayments['payment1'].tipPercent).toEqual(20);
     });
 
+    it('should create a new payment on createCurPayemnt', function () {
+        let expectedPayment = {
+            billAmt: '100',
+            tipAmt: '20';
+            tipPercent:20;
+        }
+    })
+
     it ('should update payment table', function () {
         appendPaymentTable(createCurPayment() = allPayments['payment1'];)
 
@@ -20,14 +28,6 @@ describe('payments tests', function () {
         expect(curTdList[2].innertext).toEqual('%20');
         expect(curTdList[3].innertext).toEqual('X');
     });
-
-    it('should create a new payment on createCurPayemnt', function () {
-        let expectedPayment = {
-            billAmt: '100',
-            tipAmt: '20';
-            tipPercent:20;
-        }
-    })
 
     afterEach (function() {
         billAmtInput.value = '';
