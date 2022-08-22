@@ -21,11 +21,15 @@ function getCurrentUIValues() {
 // Put some default values in the inputs
 // Call a function to calculate the current monthly payment
 function setupIntialValues() {
+  let p = amount;
+  let n = years * 12;
+  let i = rate / 12;
 }
 
 // Get the current values from the UI
 // Update the monthly payment
 function update() {
+  
 }
 
 // Given an object of values (a value has amount, years and rate ),
