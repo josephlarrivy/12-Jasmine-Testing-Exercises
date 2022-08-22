@@ -14,19 +14,18 @@ describe('payments tests', function () {
     it('should create a new payment on createCurPayemnt', function () {
         let expectedPayment = {
             billAmt: '100',
-            tipAmt: '20';
-            tipPercent:20;
+            tipAmt: '20',
+            tipPercent: 20,
         }
     })
 
     it ('should update payment table', function () {
-        appendPaymentTable(createCurPayment() = allPayments['payment1'];)
+        appendPaymentTable(createCurPayment() = allPayments['payment1']);
 
         let curTdList = document.querySelectorAll('#paymentTable tbody tr td');
         expect(curTdList[0].innertext).toEqual('$100');
         expect(curTdList[1].innertext).toEqual('$20');
         expect(curTdList[2].innertext).toEqual('%20');
-        expect(curTdList[3].innertext).toEqual('X');
     });
 
     afterEach (function() {

@@ -26,11 +26,4 @@ describe('helpers tests', function() {
         allPayments = {};
     })
 
-
-
-
-
-
-
-
 })
